@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manan's Photography</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Manan Jagani Logo" class="logo" />
+    </div>
+    <p class="tagline">Capturing stories through the lens</p>
+  </header>
+
+  <!-- Filter Buttons -->
+  <section class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="landscape">Landscape</button>
+    <button class="filter-btn" data-filter="street">Street</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery"></section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Manan, a passionate photographer. I believe every picture tells a story.
+      Here's a collection of moments I've captured.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Follow me on Instagram: <a href="https://www.instagram.com/manan_j.7/" target="_blank">@manan_j.7</a></p>
+    <p>Email: mananjagani48@gmail.com</p>
+  </section>
+
+  <!-- Image Modal -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
