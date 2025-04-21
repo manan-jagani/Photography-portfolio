@@ -96,3 +96,21 @@ window.onclick = function (event) {
 
 // Initial gallery load with all images
 renderImages();
+
+
+// Section scroll animations
+const revealSections = () => {
+  const about = document.querySelector('.about');
+  const contact = document.querySelector('.contact');
+  const triggerPoint = window.innerHeight * 0.85;
+
+  [about, contact].forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < triggerPoint) {
+      section.classList.add('visible');
+    }
+  });
+};
+
+window.addEventListener('scroll', revealSections);
+window.addEventListener('load', revealSections); // On first load

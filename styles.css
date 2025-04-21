@@ -158,3 +158,81 @@ body {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* ...keep everything above as is... */
+
+/* Add this below your @keyframes fadeIn */
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sectionFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal animation */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.95);
+  animation: modalFade 0.3s ease forwards;
+}
+
+.modal.show {
+  display: block;
+  animation: modalFade 0.3s ease forwards;
+}
+
+
+/* New gallery item animation on filter change */
+.gallery .gallery-item {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* About / Contact reveal animation */
+.about, .contact {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+  will-change: transform, opacity;
+}
+
+/* Active class added via JS for animation */
+.about.visible,
+.contact.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #0d0d0d;
+}
